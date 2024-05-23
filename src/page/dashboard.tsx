@@ -7,98 +7,9 @@ import early from "../assets/icons/early.svg";
 import people2 from "../assets/icons/people2.svg";
 import people1 from "../assets/icons/people1.svg";
 import Config from "../assets/icons/check.svg";
-
-import {
-  LineChart,
-  Line,
-  CartesianGrid,
-  XAxis,
-  YAxis,
-  Tooltip,
-  Legend,
-} from "recharts";
-import { PureComponent } from "react";
-
-const data = [
-  {
-    name: "Jan",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: "Feb",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: "Mar",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: "Apr",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: "May",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: "Jun",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-  {
-    name: "Jul",
-    uv: 2000,
-    pv: 6800,
-    amt: 2200,
-  },
-  {
-    name: "Aug",
-    uv: 2181,
-    pv: 3800,
-    amt: 2100,
-  },
-  {
-    name: "Sep",
-    uv: 3246,
-    pv: 4300,
-    amt: 2100,
-  },
-  {
-    name: "Oct",
-    uv: 2100,
-    pv: 3490,
-    amt: 2210,
-  },
-  {
-    name: "Nov",
-    uv: 1200,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: "Dec",
-    uv: 9800,
-    pv: 4800,
-    amt: 2000,
-  },
-];
+import "../index.css";
+import AppChart from "./chart/Chart";
+import LocationSummary from "./locationSummary/LocationSummary";
 
 export default function Dashboard() {
   return (
@@ -189,9 +100,9 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-8 mt-12">
+      <div className="grid grid-cols-3 gap-8 mt-12 flex-wrap">
         <div className="card col-span-2">
-          <div className="flex items-center gap-3 justify-between">
+          <div className="flex items-center gap-2 justify-around">
             <h3 className="font-bold">Tableau de comparaison des présences</h3>
             <small className="text-indigo-500 relative after:absolute after:-left-2 after:top-2 after:bg-indigo-500 after:w-2 after:h-2 after:rounded-full">
               Quotidienne
@@ -216,7 +127,9 @@ export default function Dashboard() {
             </thead>
             <tbody className="text-xs">
               <tr>
-                <img src={people2} alt="" />
+                <td>
+                  <img src={people2} alt="" />
+                </td>
                 <td>Tabe Lilan</td>
                 <td>UI/UX Design</td>
                 <td>
@@ -226,7 +139,9 @@ export default function Dashboard() {
                 </td>
               </tr>
               <tr>
-                <img src={people1} alt="" />
+                <td>
+                  <img src={people1} alt="" />
+                </td>
                 <td>Nfor Glen</td>
                 <td>Developer</td>
                 <td>
@@ -236,7 +151,9 @@ export default function Dashboard() {
                 </td>
               </tr>
               <tr>
-                <img src={people2} alt="" />
+                <td>
+                  <img src={people2} alt="" />
+                </td>
                 <td>Tabe Lilan</td>
                 <td>UI/UX Design</td>
                 <td>
@@ -249,28 +166,8 @@ export default function Dashboard() {
           </table>
         </div>
       </div>
+      <LocationSummary/>
     </div>
   );
 }
 
-class AppChart extends PureComponent {
-  render() {
-    return (
-      <LineChart width={600} height={200} data={data}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" padding={{ left: 30, right: 30 }} />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Line
-          type="monotone"
-          dataKey="pv"
-          stroke="#8884d8"
-          width={5}
-          activeDot={{ r: 8 }}
-          accentHeight={10}
-        />
-      </LineChart>
-    );
-  }
-}

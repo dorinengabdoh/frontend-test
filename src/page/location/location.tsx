@@ -75,98 +75,155 @@ const Location = () => {
             <button className="btn">PDF</button>
             <button className="btn">EXCEL</button>
           </div>
-          <div className="table">
-            <div className="title">
-              <img src={Checkbox} alt="" />
-              <div className="city">
-                <p>Town/City</p>
-                <img src={down} alt="" />
-              </div>
-              <div className="city">
-                <p>Employees Onsite</p>
-                <img className="icon" src={down} alt="" />
-              </div>
-              <div className="citi">
-                <p>Download QRCode</p>
-                <img src={down} alt="" />
-              </div>
-              <div className="city">
-                <p>Action</p>
-                <img src={down} alt="" />
-              </div>
-            </div>
-            <div className="city1">
-              <img src={Checkbox} alt="" />
-              <div className="city">
-                <p>Bastos,Yaounde</p>
-              </div>
-              <div className="city">
-                <img className="people1" src={people1} alt="" />
-                <img className="people2" src={people2} alt="" />
-                <img className="image" src={image287} alt="" />
-                <p className="none"></p>
-              </div>
-              <button className="BtnN">Download QRCode</button>
-              <div className="citys">
-                <img src={eye} alt="" />
-                <img src={edit} alt="" />
-                <img src={trash} alt="" />
-              </div>
-            </div>
-            <div className="city2">
-              <img src={Checkbox} alt="" />
-              <div className="city">
-                <p> Moly kodd, Buea</p>
-              </div>
-              <div className="city">
-                <img className="people1" src={people1} alt="" />
-                <img className="people2" src={people2} alt="" />
-                <img className="image" src={image287} alt="" />
-                <p className="none"></p>
-              </div>
-              <button className="BtnN">Download QRCode</button>
-              <div className="citys">
-                <img src={eye} alt="" />
-                <img src={edit} alt="" />
-                <img src={trash} alt="" />
-              </div>
-            </div>
-            <div className="city1">
-              <img src={Checkbox} alt="" />
-              <div className="city">
-                <p>Small Soppo,Buea</p>
-              </div>
-              <div className="city">
-                <img className="people1" src={people1} alt="" />
-                <img className="people2" src={people2} alt="" />
-                <img className="image" src={image287} alt="" />
-                <p className="none"></p>
-              </div>
-              <button className="BtnN">Download QRCode</button>
-              <div className="citys">
-                <img src={eye} alt="" />
-                <img src={edit} alt="" />
-                <img src={trash} alt="" />
-              </div>
-            </div>
-            <div className="city2">
-              <img src={Checkbox} alt="" />
-              <div className="city">
-                <p>Simbock,Yaounde</p>
-              </div>
-              <div className="city">
-                <img className="people1" src={people1} alt="" />
-                <img className="people2" src={people2} alt="" />
-                <img className="image" src={image287} alt="" />
-                <p className="none"></p>
-              </div>
-              <button className="BtnN">Download QRCode</button>
-              <div className="citys">
-                <img src={eye} alt="" />
-                <img src={edit} alt="" />
-                <img src={trash} alt="" />
-              </div>
-            </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <img src={Checkbox} alt="" />
+                </th>
+                <th>
+                  <div className="city">
+                    <p>Town/City</p>
+                    <img src={down} alt="" />
+                  </div>
+                </th>
+                <th>
+                  <div className="city">
+                    <p>Employees Onsite</p>
+                    <img className="icon" src={down} alt="" />
+                  </div>
+                </th>
+                <th>
+                  <div className="citi">
+                    <p>Download QRCode</p>
+                    <img src={down} alt="" />
+                  </div>
+                </th>
+                <th>
+                  <div className="city">
+                    <p>Action</p>
+                    <img src={down} alt="" />
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img src={Checkbox} alt="" />
+                </td>
+                <td>
+                  <div className="city">
+                    <p>Bastos,Yaounde</p>
+                  </div>
+                </td>
+                <td>
+                  <div className="city">
+                    <img className="people1" src={people1} alt="" />
+                    <img className="people2" src={people2} alt="" />
+                    <img className="image" src={image287} alt="" />
+                    <p className="none"></p>
+                  </div>
+                </td>
+                <td>
+                  <button className="BtnN">Download QRCode</button>
+                </td>
+                <td>
+                  <div className="citys">
+                    <img src={eye} alt="" />
+                    <img src={edit} alt="" />
+                    <img src={trash} alt="" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src={Checkbox} alt="" />
+                </td>
+                <td>
+                  <div className="city">
+                    <p> Moly kodd, Buea</p>
+                  </div>
+                </td>
+                <td>
+                  <div className="city">
+                    <img className="people1" src={people1} alt="" />
+                    <img className="people2" src={people2} alt="" />
+                    <img className="image" src={image287} alt="" />
+                    <p className="none"></p>
+                  </div>
+                </td>
+                <td>
+                  <button className="BtnN">Download QRCode</button>
+                </td>
+                <td>
+                  <div className="citys">
+                    <img src={eye} alt="" />
+                    <img src={edit} alt="" />
+                    <img src={trash} alt="" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src={Checkbox} alt="" />
+                </td>
+                <td>
+                  <div className="city">
+                    <p>Small Soppo,Buea</p>
+                  </div>
+                </td>
+                <td>
+                  <div className="city">
+                    <img className="people1" src={people1} alt="" />
+                    <img className="people2" src={people2} alt="" />
+                    <img className="image" src={image287} alt="" />
+                    <p className="none"></p>
+                  </div>
+                </td>
+                <td>
+                  <button className="BtnN">Download QRCode</button>
+                </td>
+                <td>
+                  <div className="citys">
+                    <img src={eye} alt="" />
+                    <img src={edit} alt="" />
+                    <img src={trash} alt="" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src={Checkbox} alt="" />
+                </td>
+                <td>
+                  {" "}
+                  <div className="city">
+                    <p>Simbock,Yaounde</p>
+                  </div>
+                </td>
+                <td>
+                  <div className="city">
+                    <img className="people1" src={people1} alt="" />
+                    <img className="people2" src={people2} alt="" />
+                    <img className="image" src={image287} alt="" />
+                    <p className="none"></p>
+                  </div>
+                </td>
+                <td>
+                  {" "}
+                  <button className="BtnN">Download QRCode</button>
+                </td>
+                <td>
+                  <div className="citys">
+                    <img src={eye} alt="" />
+                    <img src={edit} alt="" />
+                    <img src={trash} alt="" />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
             <div className="bottom">
               <button className="prevBtn">prev</button>
               <p>
@@ -174,7 +231,7 @@ const Location = () => {
               </p>
               <button className="prevBtn">Next</button>
             </div>
-          </div>
+          </table>
         </div>
       </div>
     </>

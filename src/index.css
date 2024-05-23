@@ -19,3 +19,50 @@ body {
 .card {
   @apply bg-white rounded-2xl p-4
 }
+
+
+@media (max-width: 768px) {
+  .table-auto {
+    @apply block overflow-x-auto whitespace-nowrap;
+  }
+
+  .table-auto thead,
+  .table-auto tbody,
+  .table-auto tr,
+  .table-auto th,
+  .table-auto td {
+    @apply block;
+  }
+
+  .table-auto thead tr {
+    @apply absolute top-[-9999px] left-[-9999px];
+  }
+
+  .table-auto tr {
+    @apply border-b border-gray-300;
+  }
+
+  .table-auto td {
+    @apply border-none relative pl-[50%];
+  }
+
+  .table-auto td:before {
+    @apply absolute top-2 left-2 w-[45%] pr-2 font-bold;
+    content: attr(data-label);
+  }
+}
+
+@media (max-width: 768px) {
+  .line-chart {
+    height: 20vh;
+  }
+
+  .line-chart .tick {
+    font-size: 0.6rem;
+  }
+
+  .line-chart .legend-wrapper {
+    font-size: 0.6rem;
+    padding: 0.3rem;
+  }
+}
